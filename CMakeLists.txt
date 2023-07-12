@@ -12,6 +12,9 @@ project(
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+include(Dependencies.cmake)
+setup_dependencies()
+
 add_subdirectory(src)
 
 #add_library(project_options INTERFACE)
