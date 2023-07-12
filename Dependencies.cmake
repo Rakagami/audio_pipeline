@@ -9,7 +9,7 @@ function(setup_dependencies)
   # already been provided to us by a parent project
 
   if(NOT TARGET CLI11::CLI11)
-    cpmaddpackage("gh:CLIUtils/CLI11@2.3.2")
+      CPMAddPackage("gh:CLIUtils/CLI11@2.3.2")
   endif()
 
 endfunction()
