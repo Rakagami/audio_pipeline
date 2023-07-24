@@ -4,7 +4,7 @@
 
 #define PI 3.14159265
 #define SAMPLE_RATE 44100
-#define DURATION 5
+#define DURATION 1
 
 int sine(float frequency, float amplitude)
 {
@@ -17,7 +17,15 @@ int sine(float frequency, float amplitude)
 
     int error = 0;
     if (!(s = pa_simple_new(
-              nullptr, "Sine Wave", PA_STREAM_PLAYBACK, nullptr, "playback", &ss, nullptr, nullptr, &error))) {
+              nullptr,
+              "Sine Wave",
+              PA_STREAM_PLAYBACK,
+              nullptr,
+              "playback",
+              &ss,
+              nullptr,
+              nullptr,
+              &error))) {
         printf("pa_simple_new() failed\n");
         return -1;
     }

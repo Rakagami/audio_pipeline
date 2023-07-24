@@ -16,7 +16,7 @@ int main(int argc, char** argv)
     float amp = 3.0;
     sineApp->add_option("-f,--freq", freq, "Parameter");
     sineApp->add_option("-a,--amp", amp, "Parameter");
-    sineApp->callback([=] {sine(freq, amp);});
+    sineApp->callback([&] {sine(freq, amp);});
 
     CLI11_PARSE(app, argc, argv);
 
